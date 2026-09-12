@@ -68,14 +68,14 @@ npm run preview
 Database name: `portfolio`
 
 1. Start **Apache** and **MySQL** in XAMPP.
-2. Import the database (full dump with tables + data):
+2. Import the database (full dump from local hosting):
 
 ```bash
-/Applications/XAMPP/xamppfiles/bin/mysql -u root < database/portfolio_dump.sql
+/Applications/XAMPP/xamppfiles/bin/mysql -u root < database/portfolio.sql
 ```
 
-Or import `database/portfolio_dump.sql` via phpMyAdmin.  
-See `database/README.md` for schema-only / seed options.
+Or import `database/portfolio.sql` via phpMyAdmin.  
+See `database/README.md` for other options.
 
 3. Build for XAMPP:
 
