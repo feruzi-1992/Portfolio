@@ -2,34 +2,35 @@
 
 Database name: `portfolio`
 
-## Files
+## Main file (from local XAMPP)
 
 | File | Purpose |
 |------|---------|
-| `portfolio_dump.sql` | **Full backup** — database + tables + data (settings, admin, messages) |
-| `portfolio_schema.sql` | Structure only (tables) |
-| `portfolio_seed.sql` | Default `site_settings` + `admin_users` |
-| `schema.sql` | Lightweight create + seed (older helper) |
-| `admin_seed.sql` | Admin user seed only |
+| **`portfolio.sql`** | **Full backup from local hosting** — CREATE DATABASE + tables + data |
 
-## Import (XAMPP)
-
-Start Apache + MySQL, then:
+Import:
 
 ```bash
-# Full restore (recommended when cloning this repo)
-/Applications/XAMPP/xamppfiles/bin/mysql -u root < database/portfolio_dump.sql
+/Applications/XAMPP/xamppfiles/bin/mysql -u root < database/portfolio.sql
 ```
 
-Or via phpMyAdmin: Import → choose `database/portfolio_dump.sql`.
+Or phpMyAdmin → Import → `database/portfolio.sql`.
+
+## Other helpers
+
+| File | Purpose |
+|------|---------|
+| `portfolio_dump.sql` | Previous dump copy |
+| `portfolio_schema.sql` | Structure only |
+| `portfolio_seed.sql` | Settings + admin seed |
+| `schema.sql` | Lightweight create + seed |
+| `admin_seed.sql` | Admin user only |
 
 ## Default admin
 
 - Username: `admin`
 - Password: `Admin@2026`
 
-Change this password after first login in production.
-
 ## API config
 
-See `api/config.php` (XAMPP defaults: user `root`, empty password, host `127.0.0.1`).
+See `api/config.php` (XAMPP: user `root`, empty password, host `127.0.0.1`).
